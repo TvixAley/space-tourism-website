@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: var(--color-blue-300);
+    font-family: "BarlowCondensed", sans-serif;
+}
+
+body{
+    background-color: var(--color-blue-500);
+    overflow-x: clip !important;
+}
