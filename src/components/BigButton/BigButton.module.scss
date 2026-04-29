@@ -1,0 +1,48 @@
+.button{
+  position: relative;
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+  border: none;
+  font-family: 'Bellefair', sans-serif;
+  font-size: 32px;
+  line-height: 37px;
+  color: var(--color-blue-500);
+
+  &:after{
+    position: absolute;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(white, 0.1);
+    transition: height .3s ease-out, width .3s ease-out;
+  }
+
+  &:hover{
+    cursor: pointer;
+    color: var(--color-blue-500-hover);
+
+    &:after{
+      width: calc(100% + 2*88px);
+      height: calc(100% + 2*88px);
+    }
+  }
+
+  &.clicked{
+    &:after{
+      width: calc((100% + 2*88px)*2);
+      height: calc((100% + 2*88px)*2);
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .button{
+    width: 144px;
+    height: 144px;
+    font-size: 18px;
+  }
+}

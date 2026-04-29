@@ -2,4 +2,25 @@
     --color-blue-500: rgb(11, 13, 23);
     --color-blue-500-hover: rgba(11, 13, 23, 0.5);
     --color-blue-300: rgb(208, 214, 249);
+
+    --font-title-size: 28px;
+    --font-bigTitle-size: 144px;
+    --font-pageTitle-size: 28px;
+    --font-paragraph-size: 18px;
+}
+
+@media (max-width: 1024px){
+    :root{
+        --font-paragraph-size: 16px;
+        --font-pageTitle-size: 20px;
+    }
+}
+
+@media (max-width: 550px){
+    :root{
+        --font-title-size: 16px;
+        --font-bigTitle-size: 80px;
+        --font-pageTitle-size: 16px;
+        --font-paragraph-size: 15px;
+    }
 }
