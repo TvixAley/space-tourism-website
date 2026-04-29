@@ -1,0 +1,50 @@
+.header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+}
+
+.sidebar{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.link{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  text-decoration: none;
+  color: white;
+  height: 96px;
+  align-items: center;
+}
+
+.slider {
+  position: absolute;
+  background: white;
+}
+
+@media (min-width: 680px) {
+  .slider {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+}
+
+@media (max-width: 679px) {
+  .slider {
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 3px;
+  }
+  .link{
+    height: unset;
+  }
+}
