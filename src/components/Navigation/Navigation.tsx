@@ -29,7 +29,7 @@ const Navigation = (props: NavProps) => {
 					{({ isActive }) => (
 						<>
 							<b>{link.id}</b>
-							<div>{link.label}</div>
+							<div className={styles.label}>{link.label}</div>
 
 							{isActive && (
 								<motion.div

@@ -13,6 +13,8 @@
 }
 
 .link{
+  font-family: 'BarlowCondensed', sans-serif;
+  font-size: 16px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -21,6 +23,16 @@
   color: white;
   height: 95px;
   align-items: center;
+
+  b{
+    font-weight: 700;
+    letter-spacing: 2.7px;
+  }
+
+  .label{
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
 }
 
 .slider {
