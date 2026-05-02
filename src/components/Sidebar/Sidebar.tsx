@@ -11,12 +11,21 @@ const Sidebar = (props: Props) => {
 	const {isOpen, setIsOpen} = props;
 
 	return (
-		<aside className={`${styles.sidebar} ${isOpen ? styles.active : ""}`}>
-			<button className={styles.closeButton} onClick={() => setIsOpen()}>
-				<img src={closeIcon} alt="close icon"/>
-			</button>
-			<Navigation variant={"sidebar"}/>
-		</aside>
+		<>
+			{isOpen && (
+				<div
+					className={styles.overlay}
+					onClick={() => setIsOpen()}
+				/>
+			)}
+
+			<aside className={`${styles.sidebar} ${isOpen ? styles.active : ""}`}>
+				<button className={styles.closeButton} onClick={() => setIsOpen()}>
+					<img src={closeIcon} alt="close icon" />
+				</button>
+				<Navigation variant={"sidebar"} />
+			</aside>
+		</>
 	);
 };
 

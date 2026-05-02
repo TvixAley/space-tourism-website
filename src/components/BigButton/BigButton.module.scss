@@ -4,9 +4,6 @@
   height: 272px;
   border-radius: 50%;
   border: none;
-  font-family: 'Bellefair', sans-serif;
-  font-size: 32px;
-  line-height: 37px;
   color: var(--color-blue-500);
 
   &:after{
@@ -43,6 +40,5 @@
   .button{
     width: 144px;
     height: 144px;
-    font-size: 18px;
   }
 }

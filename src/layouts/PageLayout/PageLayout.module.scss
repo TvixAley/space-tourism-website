@@ -1,6 +1,6 @@
 .pageWrapper{
   position: relative;
-  min-height: calc(100vh - 96px - 40px);
+  min-height: calc(100dvh - 96px - 40px);
 }
 
 .main{
@@ -14,10 +14,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: clip;
 }
 
 .bg {
+  height: 100vh;
   position: fixed;
   inset: 0;
 

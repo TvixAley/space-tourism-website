@@ -7,9 +7,13 @@
 html{
     color: var(--color-blue-300);
     font-family: "BarlowCondensed", sans-serif;
+    scrollbar-gutter: stable;
 }
 
 body{
     background-color: var(--color-blue-500);
-    overflow-x: clip !important;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }

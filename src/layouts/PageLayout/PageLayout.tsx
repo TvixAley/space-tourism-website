@@ -17,7 +17,7 @@ function PageLayout(props: PageLayoutProps) {
 
 
 	return (
-		<div className={styles.layout} style={{ overflow: lockOverflow ? "clip" : "auto" }}>
+			<div className={styles.layout} style={{ overflow: lockOverflow ? "hidden" : "visible" }}>
 			<Header setSidebarOpen={() => setSidebarOpen(true)}/>
 			<Sidebar isOpen={sidebarOpen} setIsOpen={() => setSidebarOpen(false)} />
 

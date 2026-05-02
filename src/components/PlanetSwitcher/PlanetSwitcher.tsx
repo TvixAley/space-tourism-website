@@ -58,7 +58,7 @@ const PlanetSwitcher = () => {
 					<ul className={styles.tabs}>
 						{data.destinations.map((planet) => (
 							<li key={planet.name}
-									className={`${styles.tab} ${planet.name == selectedPlanet.name ? styles.active : ""}`}
+									className={`${styles.tab} ${planet.name == selectedPlanet.name ? styles.active : ""} text-preset-8`}
 									onClick={() => setSelectedPlanet(planet)}
 							>
 								{planet.name.toUpperCase()}
@@ -82,7 +82,7 @@ const PlanetSwitcher = () => {
 							animate="show"
 							exit="hidden"
 						>
-								<motion.h3 variants={item} className={styles.title}>
+								<motion.h3 variants={item} className={`${styles.title} text-preset-2`}>
 									{selectedPlanet.name.toUpperCase()}
 								</motion.h3>
 								<motion.p variants={item} className={styles.description}>
@@ -93,15 +93,15 @@ const PlanetSwitcher = () => {
 
 							<motion.div variants={item} className={styles.statistics}>
 								<div className={styles.column}>
-									<div className={styles.statisticsLabel}>AVG. DISTANCE</div>
-									<div className={styles.statisticsValue}>
+									<div className={"text-preset-7"}>AVG. DISTANCE</div>
+									<div className={"text-preset-6"}>
 										{selectedPlanet.distance.toUpperCase()}
 									</div>
 								</div>
 
 								<div className={styles.column}>
-									<div className={styles.statisticsLabel}>EST. TRAVEL TIME</div>
-									<div className={styles.statisticsValue}>
+									<div className={"text-preset-7"}>EST. TRAVEL TIME</div>
+									<div className={"text-preset-6"}>
 										{selectedPlanet.travel.toUpperCase()}
 									</div>
 								</div>

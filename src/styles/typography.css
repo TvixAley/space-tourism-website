@@ -1,0 +1,108 @@
+.text-preset-1{
+    font-family: 'Bellefair', sans-serif;
+    font-weight: 400;
+    font-size: 144px;
+    line-height: 115%;
+    color: white;
+}
+
+.text-preset-2{
+    font-family: 'Bellefair', sans-serif;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 115%;
+    color: white;
+}
+
+.text-preset-3{
+    font-family: 'Bellefair', sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: white;
+}
+
+.text-preset-4{
+    font-family: 'Bellefair', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: white;
+}
+
+.text-preset-5{
+    font-family: 'BarlowCondensed', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 121%;
+    letter-spacing: 4px;
+    color: var(--color-blue-300);
+}
+
+.text-preset-6{
+    font-family: 'Bellefair', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: white;
+}
+
+.text-preset-7{
+    font-family: 'BarlowCondensed', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 121%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-blue-300);
+}
+
+.text-preset-8{
+    font-family: 'BarlowCondensed', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 118%;
+    letter-spacing: 2px;
+    color: var(--color-blue-300);
+}
+
+.text-preset-9{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    color: var(--color-blue-300);
+}
+
+@media (max-width: 750px){
+    .text-preset-2{
+        font-size: 80px;
+    }
+    .text-preset-9{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 550px){
+    .text-preset-1{
+        font-size: 80px;
+    }
+    .text-preset-2{
+        font-size: 56px;
+    }
+    .text-preset-4{
+        font-size: 18px;
+    }
+    .text-preset-5{
+        font-size: 16px;
+    }
+    .text-preset-8{
+        font-size: 14px;
+    }
+    .text-preset-9{
+        font-size: 15px;
+    }
+}

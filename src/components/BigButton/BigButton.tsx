@@ -16,7 +16,7 @@ const BigButton = (props: Props) => {
 	}
 
 	return (
-		<button className={`${styles.button} ${clicked ? styles.clicked : ''}`} onClick={() => animateOnClick()}>
+		<button className={`${styles.button} ${clicked ? styles.clicked : ''} text-preset-4`} onClick={() => animateOnClick()}>
 			{children}
 		</button>
 	);

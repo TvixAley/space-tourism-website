@@ -8,6 +8,7 @@
 }
 
 .imageWrapper {
+  min-height: 383px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -35,13 +36,6 @@
 
 .tab{
   position: relative;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2px;
-
-  color: var(--color-blue-300);
-
   padding-bottom: 13px;
 
   &:after{
@@ -84,15 +78,6 @@
   height: 3px;
 }
 
-.title{
-  font-family: 'Bellefair', sans-serif;
-  font-weight: 400;
-  font-size: var(--font-destinationTitle-size);
-  line-height: 90%;
-
-  color: white;
-}
-
 .description{
   max-width: 445px;
   font-family: 'Barlow', sans-serif;
@@ -111,7 +96,7 @@
 .statistics{
   display: flex;
   flex-direction: row;
-  column-gap: 24px;
+  gap: 24px;
 
   .column{
     width: 100%;
@@ -119,13 +104,6 @@
     flex-direction: column;
     row-gap: 12px;
   }
-}
-
-.statisticsLabel{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 2px;
 }
 
 .statisticsValue{
@@ -158,5 +136,30 @@
 
   .animatedWrapper{
     height: 100%;
+  }
+
+  .destinationWrapper{
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .imageWrapper{
+    min-height: 195px;
+  }
+  .image{
+    max-width: 150px;
+    width: 100%;
+    padding-block: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .animatedWrapper, .switcher, .destinationWrapper{
+    gap: 24px;
+  }
+  .statistics{
+    flex-direction: column;
   }
 }

@@ -19,31 +19,6 @@
   row-gap: 24px;
 }
 
-.title{
-  font-family: 'BarlowCondensed', sans-serif;
-  font-weight: 400;
-  font-size: var(--font-title-size);
-  line-height: 120%;
-  letter-spacing: 4px;
-  color: var(--color-blue-300);
-}
-
-.bigTitle{
-  font-family: 'Bellefair', sans-serif;
-  font-weight: 400;
-  font-size: var(--font-bigTitle-size);
-  line-height: 115%;
-
-  color: white;
-}
-
-.paragraph{
-  font-family: 'Barlow', sans-serif;
-  font-weight: 400;
-  font-size: var(--font-paragraph-size);
-  line-height: 180%;
-  color: var(--color-blue-300);
-}
 
 .buttonContainer{
   width: 100%;

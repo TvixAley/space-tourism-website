@@ -20,20 +20,11 @@
 }
 
 .pageNumber{
-  font-size: var(--font-pageTitle-size);
-  line-height: 34px;
+  font-weight: 700;
   letter-spacing: 4.725px;
-  color: white;
   opacity: 0.25;
 }
 
-.title{
-  font-weight: 400;
-  font-size: var(--font-pageTitle-size);
-  line-height: 34px;
-  letter-spacing: 4px;
-  color: white;
-}
 
 @media (max-width: 1024px) {
   .container{
@@ -44,5 +35,8 @@
 @media (max-width: 750px) {
   .container{
     padding: 24px;
+  }
+  .titleContainer{
+    justify-content: center;
   }
 }
