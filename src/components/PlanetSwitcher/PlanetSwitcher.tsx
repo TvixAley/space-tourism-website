@@ -21,8 +21,6 @@ const PlanetSwitcher = () => {
 
 	const [selectedPlanet, setSelectedPlanet] = useState(data.destinations[0]);
 
-	const planetImages = getPlanetImages(selectedPlanet.name);
-
 	const container = {
 		hidden: {},
 		show: {
@@ -40,18 +38,27 @@ const PlanetSwitcher = () => {
 	return (
 		<div className={styles.switcher}>
 			<div className={styles.imageWrapper}>
-				<AnimatePresence mode="wait">
-					<motion.picture
-						key={selectedPlanet.name}
-						initial={{ opacity: 0, rotate: -15, scale: 0.8 }}
-						animate={{ opacity: 1, rotate: 0, scale: 1 }}
-						exit={{ opacity: 0, rotate: 15, scale: 0.8 }}
-						transition={{ duration: 0.7, ease: "easeInOut" }}
-					>
-						<source srcSet={planetImages.webp} type="image/webp" />
-						<img src={planetImages.png} alt={selectedPlanet.name} className={styles.image} />
-					</motion.picture>
-				</AnimatePresence>
+				{data.destinations.map((planet) => {
+					const images = getPlanetImages(planet.name);
+
+					return (
+						<motion.img
+							key={planet.name}
+							src={images.webp || images.png}
+							className={styles.image}
+							animate={{
+								opacity: planet.name === selectedPlanet.name ? 1 : 0,
+								scale: planet.name === selectedPlanet.name ? 1 : 0.8,
+								rotate: planet.name === selectedPlanet.name ? 0 : -15,
+							}}
+							transition={{
+								duration: 0.7,
+								ease: "easeInOut",
+								delay: planet.name === selectedPlanet.name ? 0.7 : 0,
+							}}
+						/>
+					);
+				})}
 			</div>
 			<div className={styles.destination}>
 				<div className={styles.destinationWrapper}>
@@ -82,12 +89,12 @@ const PlanetSwitcher = () => {
 							animate="show"
 							exit="hidden"
 						>
-								<motion.h3 variants={item} className={`${styles.title} text-preset-2`}>
-									{selectedPlanet.name.toUpperCase()}
-								</motion.h3>
-								<motion.p variants={item} className={styles.description}>
-									{selectedPlanet.description}
-								</motion.p>
+							<motion.h3 variants={item} className={`${styles.title} text-preset-2`}>
+								{selectedPlanet.name.toUpperCase()}
+							</motion.h3>
+							<motion.p variants={item} className={styles.description}>
+								{selectedPlanet.description}
+							</motion.p>
 
 							<motion.hr variants={item} className={styles.line} />
 
